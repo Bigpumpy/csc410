@@ -33,9 +33,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primaryColor: Colors.black),
       home: Scaffold(
-        backgroundColor: Colors.cyanAccent,
+        backgroundColor: Colors.orange,
         appBar: AppBar(
-          backgroundColor: Colors.cyanAccent,
+          backgroundColor: Colors.orangeAccent,
           title: Text('CSC 410 Class'),
           elevation: 1.0,
         ),
@@ -50,29 +50,35 @@ class MyApp extends StatelessWidget {
                     child: Text('Press Me'),
                   ),
                   GestureDetector(
-                    onTap: () => {
-                      print('Albert tapped me')
-                    },
+                    onTap: () => {print('Albert tapped me')},
                     child: Container(
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.green, width: 3),
                         borderRadius: BorderRadius.circular(15),
                       ),
                       padding: EdgeInsets.all(5),
-                      child: Text('Tap ME', style: TextStyle(color: Colors.teal)),
+                      child: Text(
+                        'Tap ME',
+                        style: TextStyle(color: Colors.teal),
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
               Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                    'https://portal.tau.edu.ng/uploads/student/ogunsanya-albert-oluwadamilola.jpeg',
-                    width: 150,
-                  ),
+                  child: Image.asset('assets/images/IMG_1760.JPG', width: 150),
                 ),
-              )
+              ),
+              SizedBox(height: 10,),
+              Text('I AM BATMAN!!!',
+                style: TextStyle(
+                  fontFamily: 'SourGummy',
+                  fontSize: 24,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),
@@ -84,13 +90,13 @@ class MyApp extends StatelessWidget {
           child: Icon(Icons.home),
         ),
         drawer: Drawer(
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: Colors.white,
           elevation: 2.0,
           child: ListView(
             padding: EdgeInsets.all(2.0),
             children: [
               DrawerHeader(
-                decoration: BoxDecoration(color: Colors.deepPurple),
+                decoration: BoxDecoration(color: Colors.grey),
                 child: Text(
                   'hi im lex luther',
                   style: TextStyle(color: Colors.white, fontSize: 24),
